@@ -1,0 +1,15 @@
+{
+  "name": "Mol Maneta | مول مانيتا — متجر ألعاب المغرب",
+  "short_name": "Mol Maneta",
+  "description": "أول متجر ألعاب في المغرب متخصص في PS5, PS4, PS3, PS2, Xbox, Nintendo. جيلبريك احترافي، إكسسوارات أصلية.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050810",
+  "theme_color": "#00e5ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "favicon.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "favicon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

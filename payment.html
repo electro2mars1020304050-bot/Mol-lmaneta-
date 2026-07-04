@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>طرق الدفع — Mol Maneta</title>
+<meta name="description" content="طرق الدفع المتوفرة فـ Mol Maneta: الدفع عند التسليم، CIH Bank، Visa، Mastercard، PayPal، تحويل بنكي."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#050810;--surface:#0c1322;--surface2:#101a2e;--text:#e8edf5;--muted:#7a8ba8;--cyan:#00e5ff;--purple:#a855f7;--green:#39ff14;--border:rgba(255,255,255,.08)}
+*,::after,::before{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Cairo',sans-serif;line-height:1.8;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 0%,rgba(0,229,255,.07),transparent 60%)}
+.container{max-width:920px;margin:0 auto;padding:2.5rem 1.5rem}
+.eyebrow{color:var(--cyan);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;display:block}
+h1{font-size:clamp(1.8rem,5vw,2.4rem);margin-bottom:.6rem;background:linear-gradient(135deg,var(--cyan),var(--green),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-weight:900}
+.lead{color:var(--muted);max-width:640px;margin-bottom:2.2rem;}
+.methods-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-bottom:2.5rem;}
+.method-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem;transition:transform .25s,border-color .25s;}
+.method-card:hover{transform:translateY(-4px);border-color:rgba(0,229,255,.3);}
+.method-icon{font-size:2rem;}
+.method-name{font-weight:800;font-size:1.05rem;}
+.method-desc{color:var(--muted);font-size:.85rem;}
+.method-badge{display:inline-flex;align-items:center;gap:.3rem;font-size:.72rem;font-weight:700;color:var(--green);}
+.empty{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;color:var(--muted);}
+.how-card{background:var(--surface2);border:1px solid var(--border);border-radius:16px;padding:1.6rem;margin-bottom:2rem;}
+.how-card h2{font-size:1.15rem;margin-bottom:.8rem;color:var(--cyan);}
+.how-card ol{padding-right:1.2rem;color:var(--muted);}
+.how-card li{margin-bottom:.5rem;}
+.note{background:rgba(0,229,255,.05);border:1px solid rgba(0,229,255,.2);border-radius:12px;padding:1rem 1.2rem;font-size:.85rem;color:var(--muted);margin-bottom:2rem;}
+.actions{display:flex;gap:.7rem;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.7rem;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .2s;}
+.btn-primary{background:linear-gradient(135deg,#00b4d8,#00e5ff);color:#050810;}
+.btn-wa{background:linear-gradient(135deg,#075e54,#25d366);color:#fff;}
+.btn:hover{transform:translateY(-2px);}
+@media(max-width:600px){.container{padding:1.5rem 1rem;}}
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="eyebrow">Mol Maneta — متجر ألعاب المغرب</span>
+  <h1>طرق الدفع</h1>
+  <p class="lead">كنوفرو عدة طرق للدفع باش تختار اللي كيناسبك. الطلب كيتأكد فالنهاية عبر واتساب مع فريقنا.</p>
+
+  <div class="methods-grid" id="methods-grid"></div>
+
+  <div class="how-card">
+    <h2>🛒 كيفاش كتخدم عملية الطلب؟</h2>
+    <ol>
+      <li>تختار المنتج اللي بغيتي وتضغط "اطلب الآن" أو "واتساب".</li>
+      <li>كيتصاوب ليك رقم تتبع للطلب مباشرة.</li>
+      <li>تواصل مع الفريق عبر واتساب وتختار طريقة الدفع المناسبة ليك من هاد اللائحة.</li>
+      <li>نأكدو الطلب ونحضرو التوصيل.</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    ℹ️ هاد الموقع كيعرض طرق الدفع كخيارات، لكن التأكيد النهائي وتفاصيل الدفع (رقم الحساب، رابط الدفع الآمن، إلخ) كتوصل ليك عبر واتساب مباشرة من فريقنا — بلا ما ندخلو معلومات بطاقتك البنكية فأي فورم فهاد الموقع، لأمانك.
+  </div>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="index.html">🛍️ رجوع للمتجر</a>
+    <a class="btn btn-wa" href="https://wa.me/212660912028?text=سلام، بغيت نعرف كثر على طرق الدفع" target="_blank" rel="noopener noreferrer">💬 اسأل عبر واتساب</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var METHODS = {
+    cod:        { icon:'💵', name:'الدفع عند التسليم', desc:'خلص كاش ملي توصلك السلعة لباب الدار.' },
+    cih:        { icon:'🏦', name:'CIH Bank',            desc:'دفع مباشر عبر حساب CIH Bank.' },
+    visa:       { icon:'💳', name:'Visa',                desc:'بطاقة Visa بنكية.' },
+    mastercard: { icon:'💳', name:'Mastercard',          desc:'بطاقة Mastercard بنكية.' },
+    paypal:     { icon:'🅿️', name:'PayPal',               desc:'حساب PayPal للدفع الدولي.' },
+    transfer:   { icon:'🏧', name:'تحويل بنكي',           desc:'تحويل مباشر لحساب بنكي.' }
+  };
+  var DEFAULTS = { cod:true, cih:true, visa:true, mastercard:true, paypal:false, transfer:true };
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+
+  var cfg = DEFAULTS;
+  try {
+    var saved = JSON.parse(localStorage.getItem('mm_payment_methods_v1'));
+    if (saved && typeof saved === 'object') cfg = saved;
+  } catch(e) {}
+
+  var grid = document.getElementById('methods-grid');
+  var enabledKeys = Object.keys(METHODS).filter(function(k){ return cfg[k]; });
+
+  if (!enabledKeys.length) {
+    grid.innerHTML = '<div class="empty">ماكايناش طرق دفع مفعّلة دابا — تواصل معنا عبر واتساب.</div>';
+  } else {
+    grid.innerHTML = enabledKeys.map(function(k){
+      var m = METHODS[k];
+      return '<div class="method-card"><div class="method-icon">'+m.icon+'</div><div class="method-name">'+esc(m.name)+'</div>'
+        + '<div class="method-desc">'+esc(m.desc)+'</div><span class="method-badge">✅ متوفر</span></div>';
+    }).join('');
+  }
+})();
+</script>
+<script>if(!location.protocol.startsWith('file')&&'serviceWorker'in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}</script>
+</body>
+</html>

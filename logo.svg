@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="mmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1830"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <linearGradient id="mmBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="55%" stop-color="#39ff14"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="mmText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="55%" stop-color="#39ff14"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="mmGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- rounded-square badge background -->
+  <rect x="8" y="8" width="184" height="184" rx="42" fill="url(#mmBg)" stroke="url(#mmBorder)" stroke-width="3"/>
+
+  <!-- hexagon accent behind the mark -->
+  <polygon points="100,34 156,67 156,133 100,166 44,133 44,67"
+           fill="none" stroke="rgba(0,229,255,.35)" stroke-width="1.5"/>
+
+  <!-- MM lettermark -->
+  <text x="100" y="118" text-anchor="middle" font-family="Orbitron,Arial Black,sans-serif"
+        font-weight="900" font-size="64" letter-spacing="-2"
+        fill="url(#mmText)" filter="url(#mmGlow)">MM</text>
+
+  <!-- accent dot -->
+  <circle cx="100" cy="150" r="4.5" fill="#00e5ff" filter="url(#mmGlow)" opacity="0.85"/>
+
+  <!-- corner circuit dots, top-left -->
+  <g fill="#00e5ff" opacity="0.35">
+    <circle cx="26" cy="26" r="2.2"/>
+    <circle cx="35" cy="26" r="2.2"/>
+    <circle cx="26" cy="35" r="2.2"/>
+  </g>
+  <!-- corner circuit dots, bottom-right -->
+  <g fill="#a855f7" opacity="0.35">
+    <circle cx="174" cy="174" r="2.2"/>
+    <circle cx="165" cy="174" r="2.2"/>
+    <circle cx="174" cy="165" r="2.2"/>
+  </g>
+</svg>

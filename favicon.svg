@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#39ff14"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="36" fill="#050810"/>
+  <rect x="6" y="6" width="188" height="188" rx="30" fill="none" stroke="url(#g)" stroke-width="3" opacity=".3"/>
+  <rect x="50" y="40" width="100" height="60" rx="12" fill="rgba(0,229,255,.08)" stroke="url(#g)" stroke-width="2"/>
+  <polygon points="100,35 170,70 170,120 100,160 30,120 30,70" fill="rgba(0,229,255,.04)" stroke="url(#g)" stroke-width="1.5" opacity=".5"/>
+  <text x="100" y="90" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="48" fill="url(#g2)">M</text>
+  <circle cx="75" cy="125" r="8" fill="#00e5ff" opacity=".6"/>
+  <circle cx="100" cy="125" r="8" fill="#39ff14" opacity=".6"/>
+  <circle cx="125" cy="125" r="8" fill="#a855f7" opacity=".6"/>
+  <rect x="88" y="145" width="24" height="6" rx="3" fill="url(#g2)" opacity=".4"/>
+</svg>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>404 — الصفحة غير موجودة | Mol Maneta</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Cairo','Tahoma',sans-serif;background:#050810;color:#eef2ff;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(0,229,255,.06),transparent 60%)}
+.container{text-align:center;position:relative;z-index:2;padding:2rem}
+.num{font-family:'Orbitron',sans-serif;font-size:clamp(5rem,15vw,10rem);font-weight:900;background:linear-gradient(135deg,#00e5ff,#39ff14,#a855f7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:glow 2.5s ease-in-out infinite;line-height:1}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 20px rgba(0,229,255,.3))}50%{filter:drop-shadow(0 0 40px rgba(0,229,255,.6)) drop-shadow(0 0 80px rgba(57,255,20,.2))}}
+h1{font-size:1.6rem;margin:1rem 0 .5rem}
+p{color:#6b7fa3;font-size:1rem;margin-bottom:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:999px;background:linear-gradient(135deg,#00b4d8,#00e5ff);color:#050810;font-weight:800;font-size:.95rem;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,229,255,.3)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,229,255,.5)}
+.shapes{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.shapes span{position:absolute;display:block;width:20px;height:20px;border-radius:4px;background:rgba(0,229,255,.04);animation:floatUp 8s linear infinite}
+.shapes span:nth-child(1){left:10%;width:40px;height:40px;animation-delay:0s;animation-duration:10s}
+.shapes span:nth-child(2){left:30%;width:20px;height:20px;animation-delay:2s;animation-duration:7s}
+.shapes span:nth-child(3){left:55%;width:30px;height:30px;animation-delay:4s;animation-duration:12s}
+.shapes span:nth-child(4){left:75%;width:15px;height:15px;animation-delay:1s;animation-duration:9s}
+.shapes span:nth-child(5){left:90%;width:25px;height:25px;animation-delay:3s;animation-duration:11s}
+@keyframes floatUp{0%{bottom:-60px;opacity:0;transform:rotate(0)}10%{opacity:1}100%{bottom:100%;opacity:0;transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="shapes"><span></span><span></span><span></span><span></span><span></span></div>
+<div class="container">
+  <div class="num">404</div>
+  <h1>هاد الصفحة ما موجودة</h1>
+  <p>يما قلتlek، الكونسول اللي كاتحّوس عليه راح. هزّنا فـ واتساب باش نعاونوك.</p>
+  <a class="btn" href="index.html">← رجع للرئيسية</a>
+  <a class="btn" href="https://wa.me/212660912028" style="background:linear-gradient(135deg,#075e54,#25d366);color:#fff;margin-top:.5rem;">💬 واتساب</a>
+</div>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
