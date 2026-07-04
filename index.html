@@ -55,7 +55,7 @@
 .lang-btn:hover{color:var(--text);background:rgba(255,255,255,.08);}
 .lang-btn .flag{font-size:1rem;}
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;background:#050810;}
+html{scroll-behavior:smooth;}
 body{
   font-family:'Cairo',sans-serif;
   background:var(--bg);color:var(--text);
@@ -173,86 +173,6 @@ body::before{
   transition:color .2s,background .2s;white-space:nowrap;
 }
 .main-nav a:hover,.main-nav a.active{color:var(--cyan);background:rgba(0,229,255,.07);}
-
-/* ── second-row nav wrapper (now sits below the main header row, desktop only) ── */
-@media(min-width:901px){
-  .site-header .main-nav{
-    justify-content:center;flex-wrap:wrap;gap:.15rem;
-    padding:.5rem 1rem .7rem;border-top:1px solid rgba(255,255,255,.04);
-  }
-}
-.nav-admin-link{
-  background:linear-gradient(135deg,rgba(0,229,255,.12),rgba(168,85,247,.12));
-  border:1px solid rgba(0,229,255,.25);color:var(--cyan) !important;
-}
-
-/* ── header search bar ── */
-.header-search{
-  display:flex;align-items:stretch;flex:1;max-width:520px;
-  background:rgba(255,255,255,.04);border:1px solid var(--border);
-  border-radius:12px;overflow:hidden;
-}
-.header-search select{
-  background:rgba(255,255,255,.03);color:var(--muted);border:none;
-  border-left:1px solid var(--border);padding:0 .6rem;font-size:.78rem;
-  font-family:inherit;cursor:pointer;max-width:110px;
-}
-.header-search input{
-  flex:1;min-width:0;background:transparent;border:none;color:var(--text);
-  padding:.65rem .9rem;font-size:.85rem;font-family:inherit;outline:none;
-}
-.header-search input::placeholder{color:var(--muted);}
-.header-search button{
-  background:linear-gradient(135deg,var(--cyan2,#00b4d8),var(--cyan));
-  border:none;color:#050810;padding:0 1.1rem;cursor:pointer;font-size:.95rem;
-  transition:filter .2s;
-}
-.header-search button:hover{filter:brightness(1.1);}
-@media(max-width:1000px){.header-search{order:3;max-width:100%;width:100%;margin-top:.6rem;grid-column:1/-1;}}
-
-/* ── header utility icons (track order / wishlist / cart / account) ── */
-.header-actions{display:flex;align-items:center;gap:.35rem;flex-shrink:0;}
-.hicon{
-  display:flex;flex-direction:column;align-items:center;gap:.1rem;
-  color:var(--muted);font-size:1.05rem;padding:.3rem .55rem;border-radius:10px;
-  transition:color .2s,background .2s;position:relative;text-align:center;
-}
-.hicon:hover{color:var(--cyan);background:rgba(0,229,255,.06);}
-.hicon small{font-size:.6rem;font-weight:700;white-space:nowrap;}
-.hicon-badge{
-  position:absolute;top:-2px;right:2px;background:linear-gradient(135deg,var(--cyan),var(--purple));
-  color:#050810;font-size:.6rem;font-weight:900;min-width:16px;height:16px;border-radius:999px;
-  display:flex;align-items:center;justify-content:center;padding:0 3px;
-}
-@media(max-width:760px){.hicon small{display:none;}}
-
-/* ── wishlist panel ── */
-#wishlist-panel{
-  position:fixed;inset:0;z-index:9997;background:rgba(0,0,0,.75);
-  display:none;align-items:center;justify-content:center;padding:1rem;
-}
-#wishlist-panel.open{display:flex;}
-.wl-panel-box{
-  background:var(--surface,#0c1322);border:1px solid rgba(0,229,255,.2);
-  border-radius:18px;max-width:420px;width:100%;max-height:80vh;
-  display:flex;flex-direction:column;overflow:hidden;
-}
-.wl-panel-head{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 1.2rem;border-bottom:1px solid var(--border);
-}
-.wl-panel-close{background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;}
-.wl-panel-body{overflow-y:auto;padding:.6rem;}
-.wl-item{
-  display:flex;align-items:center;gap:.6rem;padding:.7rem .8rem;
-  border-radius:10px;transition:background .2s;font-size:.85rem;
-}
-.wl-item:hover{background:rgba(255,255,255,.04);}
-.wl-item span:first-child{flex:1;}
-.wl-item-price{color:var(--cyan);font-weight:700;white-space:nowrap;}
-.wl-item-remove{background:none;border:none;cursor:pointer;font-size:.95rem;opacity:.7;}
-.wl-item-remove:hover{opacity:1;}
-
 .menu-toggle{
   display:none;background:rgba(255,255,255,.05);
   border:1px solid var(--border);color:var(--text);
@@ -441,18 +361,13 @@ body::before{
 .hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;}
 
 /* ── FEATS ── */
-.hero-feats{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:center;}
+.hero-feats{display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;}
 .hfeat{
-  display:inline-flex;align-items:center;gap:.6rem;
-  padding:.6rem 1.1rem;border-radius:14px;
-  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-  transition:border-color .2s,transform .2s;
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.5rem .95rem;border-radius:12px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.04em;
 }
-.hfeat:hover{border-color:rgba(0,229,255,.3);transform:translateY(-2px);}
-.hfeat-ic{font-size:1.25rem;flex-shrink:0;}
-.hfeat-txt{display:flex;flex-direction:column;text-align:right;line-height:1.3;}
-.hfeat-txt b{font-size:.8rem;font-weight:800;color:var(--text);}
-.hfeat-txt small{font-size:.68rem;color:var(--muted);}
 
 /* ═══════════════════════════════════════════
    SECTION HEADERS
@@ -1173,196 +1088,9 @@ body::before{
   .product-grid{grid-template-columns:1fr;}
   .container{width:min(1400px,calc(100% - 1.2rem));}
 }
-
-/* ══════════ GALAXY BACKGROUND ══════════ */
-#galaxy-bg{
-  position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 0%,#0a1128 0%,#050810 55%,#020306 100%);
-  overflow:hidden;
-}
-#galaxy-canvas{position:absolute;inset:0;width:100%;height:100%;}
-body::after{
-  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background:radial-gradient(ellipse at 50% 30%,rgba(0,229,255,.04),transparent 60%);
-}
-@media(prefers-reduced-motion:reduce){
-  #galaxy-canvas{opacity:.5;}
-}
-
-/* ══════════ SKELETON LOADING ══════════ */
-.skeleton{
-  position:relative;overflow:hidden;background:rgba(255,255,255,.04);
-  border-radius:12px;
-}
-.skeleton::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);
-  transform:translateX(-100%);
-  animation:skeletonShimmer 1.6s infinite;
-}
-@keyframes skeletonShimmer{100%{transform:translateX(100%);}}
-.skeleton-card{height:340px;border-radius:20px;}
-.skeleton-text{height:14px;margin:.4rem 0;border-radius:6px;}
-body.assets-loading .product-grid .product-card{visibility:hidden;}
-
-/* ══════════ SEASONAL SALES BANNER ══════════ */
-#seasonal-banner{
-  position:sticky;top:0;z-index:1200;width:100%;
-  box-shadow:0 2px 20px rgba(0,0,0,.4);
-}
-.seasonal-inner{
-  max-width:1400px;margin:0 auto;padding:.5rem 1rem;
-  display:flex;align-items:center;justify-content:center;gap:.7rem;
-  flex-wrap:wrap;color:#fff;font-weight:800;font-size:.86rem;text-align:center;
-}
-.seasonal-emoji{font-size:1.2rem;}
-.seasonal-discount{
-  background:rgba(255,255,255,.18);padding:.15rem .6rem;border-radius:999px;font-size:.78rem;
-}
-.seasonal-countdown{display:flex;align-items:center;gap:.3rem;font-family:'Orbitron',sans-serif;}
-.seasonal-countdown b{
-  background:rgba(0,0,0,.3);padding:.15rem .45rem;border-radius:6px;font-size:.85rem;min-width:1.6em;display:inline-block;
-}
-.seasonal-countdown small{opacity:.75;font-size:.66rem;margin-left:.15rem;}
-.seasonal-close{
-  background:rgba(255,255,255,.15);border:none;color:#fff;width:22px;height:22px;border-radius:50%;
-  cursor:pointer;font-size:.9rem;line-height:1;flex-shrink:0;
-}
-.seasonal-close:hover{background:rgba(255,255,255,.3);}
-body.has-seasonal-banner .site-header{top:0;}
-@media(max-width:600px){
-  .seasonal-inner{font-size:.74rem;gap:.4rem;}
-  .seasonal-countdown b{padding:.1rem .3rem;font-size:.74rem;}
-}
-
-/* ── Order tracking widget ── */
-.ot-empty{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:1.4rem;text-align:center;color:var(--muted,#7a8ba8);}
-.ot-result{background:rgba(255,255,255,.03);border:1px solid rgba(0,229,255,.15);border-radius:16px;padding:1.4rem;}
-.ot-result.ot-cancelled{border-color:rgba(255,71,87,.3);}
-.ot-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem;flex-wrap:wrap;}
-.ot-head strong{display:block;font-size:1rem;}
-.ot-product{color:var(--muted,#7a8ba8);font-size:.85rem;}
-.ot-price{font-weight:900;color:#00e5ff;font-size:1.1rem;}
-.ot-progress-bar{height:6px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:1.4rem;}
-.ot-progress-fill{height:100%;background:linear-gradient(90deg,#00e5ff,#39ff14);border-radius:999px;transition:width .5s ease;}
-.ot-cancelled .ot-progress-fill{background:linear-gradient(90deg,#ff4757,#ff6b81);}
-.ot-timeline{display:flex;flex-direction:column;gap:0;}
-.ot-step{display:flex;align-items:center;gap:.8rem;padding:.6rem 0;opacity:.4;position:relative;}
-.ot-step.reached{opacity:1;}
-.ot-step.current .ot-dot{box-shadow:0 0 0 4px rgba(0,229,255,.2);}
-.ot-dot{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
-.ot-step.reached .ot-dot{background:linear-gradient(135deg,#00b4d8,#00e5ff);}
-.ot-step.current .ot-dot{background:linear-gradient(135deg,#00e5ff,#39ff14);}
-.ot-label{flex:1;font-weight:700;font-size:.9rem;}
-.ot-time{color:var(--muted,#7a8ba8);font-size:.72rem;white-space:nowrap;}
-
-/* ── Global toast (tracking.js / shared) ── */
-#mm-toast-host{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:99999;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none;}
-.mm-toast{background:#101a2e;border:1px solid rgba(0,229,255,.3);color:#e8edf5;padding:.7rem 1.3rem;border-radius:999px;font-size:.85rem;font-weight:700;box-shadow:0 8px 30px rgba(0,0,0,.5);opacity:0;transform:translateY(16px);transition:opacity .3s,transform .3s;pointer-events:auto;cursor:pointer;}
-.mm-toast.show{opacity:1;transform:translateY(0);}
-.mm-toast-success{border-color:rgba(57,255,20,.35);}
-.mm-toast-error{border-color:rgba(255,71,87,.4);}
-/* ══════════ UTILITY BAR (search + categories + account) ══════════ */
-.utility-bar{background:rgba(5,8,16,.92);border-bottom:1px solid rgba(255,255,255,.06);padding:.6rem 0;}
-.utility-inner{display:flex;align-items:center;gap:.8rem;max-width:1400px;margin:0 auto;padding:0 1.5rem;}
-.cat-dropdown{position:relative;flex-shrink:0;}
-.cat-dropdown-btn{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;border:none;padding:.6rem 1rem;border-radius:10px;font-weight:800;font-size:.85rem;cursor:pointer;white-space:nowrap;}
-.cat-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:#0c1322;border:1px solid rgba(255,255,255,.1);border-radius:12px;min-width:200px;box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .2s;z-index:200;overflow:hidden;}
-.cat-dropdown.open .cat-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
-.cat-dropdown-menu a{display:flex;align-items:center;gap:.6rem;padding:.7rem 1rem;color:#e8edf5;font-size:.85rem;font-weight:600;transition:background .2s;}
-.cat-dropdown-menu a:hover{background:rgba(168,85,247,.12);}
-.utility-search{flex:1;position:relative;}
-.utility-search input{width:100%;padding:.65rem 3rem .65rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);color:#fff;font-family:inherit;font-size:.88rem;}
-.utility-search input:focus{outline:none;border-color:#a855f7;}
-.utility-search button{position:absolute;left:4px;top:50%;transform:translateY(-50%);background:linear-gradient(135deg,#7c3aed,#a855f7);border:none;color:#fff;width:34px;height:34px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.utility-actions{display:flex;align-items:center;gap:1.2rem;flex-shrink:0;}
-.utility-action{display:flex;flex-direction:column;align-items:center;gap:.15rem;color:#c7d2e4;font-size:.68rem;font-weight:700;position:relative;cursor:pointer;white-space:nowrap;}
-.utility-action .u-icon{font-size:1.15rem;}
-.utility-action .u-badge{position:absolute;top:-6px;right:-10px;background:linear-gradient(135deg,#ff2d55,#ff6b81);color:#fff;font-size:.62rem;font-weight:900;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-@media(max-width:900px){.utility-inner{flex-wrap:wrap;}.utility-search{order:3;flex-basis:100%;}}
-
-/* ══════════ HERO SHOWCASE (console composition) ══════════ */
-.hero-showcase{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px;}
-.hero-orbit-ring{position:absolute;width:min(70vw,560px);height:min(70vw,560px);border-radius:50%;border:1px solid rgba(168,85,247,.25);box-shadow:0 0 80px rgba(124,58,237,.25),inset 0 0 80px rgba(0,229,255,.06);animation:heroOrbitSpin 22s linear infinite;}
-.hero-orbit-ring::before,.hero-orbit-ring::after{content:'';position:absolute;width:8px;height:8px;border-radius:50%;background:#00e5ff;box-shadow:0 0 12px #00e5ff;top:-4px;left:50%;}
-.hero-orbit-ring::after{background:#a855f7;box-shadow:0 0 12px #a855f7;top:auto;bottom:-4px;left:auto;right:15%;}
-@keyframes heroOrbitSpin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.console-group{position:relative;display:flex;align-items:flex-end;gap:-10px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6));z-index:2;}
-.console-group svg{display:block;}
-.console-ps{margin-left:-18px;animation:consoleFloat 5s ease-in-out infinite;}
-.console-xbox{animation:consoleFloat 5s ease-in-out infinite .6s;}
-@keyframes consoleFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;cursor:pointer;z-index:5;transition:background .2s;}
-.hero-arrow:hover{background:rgba(168,85,247,.3);}
-.hero-arrow.left{left:8px;}
-.hero-arrow.right{right:8px;}
-@media(max-width:760px){.hero-arrow{display:none;}}
-
-/* ══════════ BRAND STRIP ══════════ */
-.brand-strip{background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.1rem 0;overflow:hidden;}
-.brand-strip-track{display:flex;align-items:center;gap:3rem;animation:brandScroll 28s linear infinite;white-space:nowrap;width:max-content;}
-.brand-strip:hover .brand-strip-track{animation-play-state:paused;}
-@keyframes brandScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.brand-item{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.05rem;color:rgba(255,255,255,.5);letter-spacing:.03em;flex-shrink:0;transition:color .2s;}
-.brand-item:hover{color:#fff;}
-.brand-item .b-icon{font-size:1.2rem;}
-
-/* ══════════ SEASONAL OFFERS GRID ══════════ */
-.seasonal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;}
-.seasonal-card{position:relative;border-radius:18px;overflow:hidden;padding:1.4rem;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;transition:transform .3s;isolation:isolate;}
-.seasonal-card:hover{transform:translateY(-6px);}
-.seasonal-card::before{content:'';position:absolute;inset:0;z-index:-1;opacity:.9;}
-.seasonal-card.s-summer::before{background:linear-gradient(145deg,#d98324,#f2a541);}
-.seasonal-card.s-winter::before{background:linear-gradient(145deg,#0b3d5c,#1f7ab5);}
-.seasonal-card.s-ramadan::before{background:linear-gradient(145deg,#2d1b4e,#7c3aed);}
-.seasonal-card.s-eid::before{background:linear-gradient(145deg,#0f3d2b,#1e7a4f);}
-.seasonal-card.s-blackfriday::before{background:linear-gradient(145deg,#0a0a0a,#5a1010);}
-.seasonal-card.s-cyber::before{background:linear-gradient(145deg,#0a1a3d,#1f4fc9);}
-.seasonal-emoji-bg{position:absolute;top:.8rem;left:.9rem;font-size:1.8rem;opacity:.9;}
-.seasonal-card h3{font-size:1.3rem;font-weight:900;line-height:1.1;margin-bottom:.15rem;}
-.seasonal-card .s-tag{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;opacity:.85;}
-.seasonal-card .s-discount{font-size:1rem;font-weight:900;margin:.4rem 0 .7rem;}
-.seasonal-card .btn-shop{align-self:flex-start;background:rgba(0,0,0,.35);backdrop-filter:blur(4px);color:#fff;border:1px solid rgba(255,255,255,.3);padding:.4rem 1rem;border-radius:999px;font-size:.78rem;font-weight:800;}
-
-/* ══════════ CATEGORY ICON STRIP ══════════ */
-.cat-icon-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:.8rem;}
-.cat-icon-item{display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1rem .5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;cursor:pointer;transition:transform .25s,border-color .25s,background .25s;text-align:center;font:inherit;color:inherit;outline:none;-webkit-appearance:none;appearance:none;}
-.cat-icon-item:hover{transform:translateY(-4px);border-color:rgba(168,85,247,.4);background:rgba(168,85,247,.06);}
-.cat-icon-item .ci-emoji{font-size:1.6rem;width:48px;height:48px;border-radius:50%;background:rgba(168,85,247,.12);display:flex;align-items:center;justify-content:center;}
-.cat-icon-item span{font-size:.75rem;font-weight:700;color:#c7d2e4;}
-.cat-icon-item.deals .ci-emoji{background:rgba(255,45,85,.15);color:#ff2d55;}
-
-/* ══════════ BEST-SELLER CARD ENHANCEMENTS (rating + discount) ══════════ */
-.pc-rating{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:#ffc84d;margin:.3rem 0;}
-.pc-rating .rc{color:var(--muted,#7a8ba8);font-weight:600;}
-.discount-badge{position:absolute;top:.7rem;right:.7rem;background:linear-gradient(135deg,#ff2d55,#ff6b81);color:#fff;font-size:.72rem;font-weight:900;padding:.25rem .55rem;border-radius:6px;z-index:3;box-shadow:0 4px 12px rgba(255,45,85,.4);}
-.wish-heart{position:absolute;top:.7rem;left:.7rem;width:32px;height:32px;border-radius:50%;background:rgba(5,8,16,.6);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;z-index:3;transition:transform .2s,background .2s;}
-.wish-heart:hover{transform:scale(1.1);}
-.wish-heart.active{background:rgba(255,45,85,.25);border-color:#ff2d55;}
-
-/* ══════════ CART DRAWER ══════════ */
-.cart-drawer-overlay{position:fixed;inset:0;background:rgba(2,4,10,.7);backdrop-filter:blur(4px);z-index:5000;display:none;}
-.cart-drawer-overlay.open{display:block;}
-.cart-drawer{position:fixed;top:0;bottom:0;left:0;width:min(380px,90vw);background:#0c1322;border-right:1px solid rgba(255,255,255,.08);z-index:5001;transform:translateX(-100%);transition:transform .3s ease;display:flex;flex-direction:column;}
-.cart-drawer-overlay.open .cart-drawer{transform:translateX(0);}
-.cart-drawer-head{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid rgba(255,255,255,.07);}
-.cart-drawer-head h3{font-size:1.05rem;font-weight:800;}
-.cart-drawer-close{background:rgba(255,255,255,.06);border:none;color:#fff;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:1.1rem;}
-.cart-drawer-items{flex:1;overflow-y:auto;padding:1rem 1.2rem;}
-.cart-item-row{display:flex;align-items:center;gap:.7rem;padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.05);}
-.cart-item-row img{width:52px;height:52px;object-fit:cover;border-radius:8px;background:#131b2e;}
-.cart-item-info{flex:1;}
-.cart-item-info strong{display:block;font-size:.85rem;margin-bottom:.15rem;}
-.cart-item-info span{font-size:.78rem;color:#00e5ff;font-weight:800;}
-.cart-item-remove{background:none;border:none;color:#ff6b81;font-size:1rem;cursor:pointer;padding:.3rem;}
-.cart-drawer-foot{padding:1.2rem 1.4rem;border-top:1px solid rgba(255,255,255,.07);}
-.cart-empty-msg{text-align:center;color:var(--muted,#7a8ba8);padding:2.5rem 1rem;font-size:.88rem;}
 </style>
 </head>
 <body>
-
-<!-- ── ANIMATED GALAXY BACKGROUND ── -->
-<div id="galaxy-bg" aria-hidden="true"></div>
 
 <!-- ── PRELOADER ── -->
 <div id="preloader">
@@ -1400,48 +1128,30 @@ body.has-seasonal-banner .site-header{top:0;}
       </div>
     </a>
 
-    <div class="header-search">
-      <select id="search-cat-select" aria-label="اختر فئة">
-        <option value="all">كل الفئات</option>
-        <option value="ps">بلايستيشن</option>
-        <option value="xbox">إكس بوكس</option>
-        <option value="nintendo">نينتندو</option>
-        <option value="steamdeck">ستيم ديك</option>
-        <option value="pc">بي سي جيمينغ</option>
-        <option value="accessory">إكسسوارات</option>
-        <option value="jailbreak">جيلبريك</option>
-      </select>
-      <input id="header-search-input" type="text" placeholder="ابحث عن منتج، ماركة، أو أكثر..." />
-      <button id="header-search-btn" aria-label="بحث">🔍</button>
-    </div>
+    <nav class="main-nav">
+      <a href="#hero" data-i18n="nav_home">الرئيسية</a>
+      <a href="#categories" data-i18n="nav_categories">فئات</a>
+      <a href="#consoles" data-i18n="nav_consoles">كونسولات</a>
+      <a href="#accessories" data-i18n="nav_accessories">إكسسوارات</a>
+      <a href="#jailbreak">جيلبريك</a>
+      <a href="#pc-setup">PC & Setup</a>
+      <a href="#offers" data-i18n="nav_offers">عروض</a>
+      <a href="#services" data-i18n="nav_services">خدمات</a>
+      <a href="#contact" data-i18n="nav_contact">اتصل</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="قائمة">☰</button>
 
     <div class="header-actions">
-      <a class="hicon" href="#order-tracking"><span>🚚</span><small>تتبع الطلب</small></a>
-      <a class="hicon" id="wishlist-icon" href="#" onclick="return false;"><span>❤️<b class="hicon-badge" id="wishlist-count-badge">0</b></span><small>المفضلة</small></a>
-      <a class="hicon" href="#contact"><span>🛒</span><small>اطلب الآن</small></a>
-      <a class="hicon" href="#" id="nav-account" data-i18n="my_account"><span>👤</span><small>حسابي</small></a>
       <button class="lang-btn" id="lang-switch" title="تغيير اللغة">
         <span class="flag" id="lang-flag">🇲🇦</span>
         <span id="lang-label">العربية</span>
       </button>
+      <a class="btn btn-ghost" href="#contact" data-i18n="order_now">اطلب الآن</a>
+      <a class="btn btn-cyan" href="/admin"><span class="btn-icon">⚙</span> <span data-i18n="nav_admin">الإدارة</span></a>
+      <a href="#" id="nav-account" style="display:none;" data-i18n="my_account">حسابي</a>
     </div>
-
-    <button class="menu-toggle" aria-label="قائمة">☰</button>
   </div>
-
-  <nav class="main-nav">
-    <a href="#hero" class="active" data-i18n="nav_home">الرئيسية</a>
-    <a href="#categories" data-i18n="nav_categories">فئات</a>
-    <a href="#consoles" data-i18n="nav_consoles">كونسولات</a>
-    <a href="#offers" data-i18n="nav_offers">🔥 عروض</a>
-    <a href="#accessories" data-i18n="nav_accessories">إكسسوارات</a>
-    <a href="#jailbreak">جيلبريك</a>
-    <a href="#pc-setup">PC & Setup</a>
-    <a href="#order-tracking">📦 تتبع الطلب</a>
-    <a href="#services" data-i18n="nav_services">خدمات</a>
-    <a href="#contact" data-i18n="nav_contact">اتصل</a>
-    <a href="admin.html" class="nav-admin-link"><span class="btn-icon">⚙</span> <span data-i18n="nav_admin">الإدارة</span></a>
-  </nav>
 </header>
 
 <!-- ════════ TICKER ════════ -->
@@ -1478,7 +1188,6 @@ body.has-seasonal-banner .site-header{top:0;}
 
 <!-- ════════ HERO ════════ -->
 <section id="hero" class="hero hero-3d-wrap">
-
   <!-- lightning -->
   <div class="bolt bolt-l" aria-hidden="true">
     <svg viewBox="0 0 90 600" fill="none" xmlns="http://www.w3.org/2000/svg" width="90" height="100%">
@@ -1633,11 +1342,11 @@ body.has-seasonal-banner .site-header{top:0;}
 
     <!-- feats -->
     <div class="hero-feats hero-3d-layer" style="--dl:3;">
-      <div class="hfeat"><span class="hfeat-ic" style="color:#00e5ff">🚚</span><span class="hfeat-txt"><b>توصيل مجاني</b><small>للطلبات فوق 1999 د.م</small></span></div>
-      <div class="hfeat"><span class="hfeat-ic" style="color:#39ff14">🔒</span><span class="hfeat-txt"><b>دفع آمن</b><small>عند الاستلام 100%</small></span></div>
-      <div class="hfeat"><span class="hfeat-ic" style="color:#00e5ff">📞</span><span class="hfeat-txt"><b>دعم 24/7</b><small>نجاوبوك فأي وقت</small></span></div>
-      <div class="hfeat"><span class="hfeat-ic" style="color:#a855f7">↩️</span><span class="hfeat-txt"><b>إرجاع سهل</b><small>ضمان 7 أيام</small></span></div>
-      <div class="hfeat"><span class="hfeat-ic" style="color:#ffd700">⭐</span><span class="hfeat-txt"><b><span class="counter" data-target="500" data-suffix="+">0</span></b><small>زبون مسرور</small></span></div>
+          <div class="hfeat"><span style="color:#ffd700">🏷️</span> أفضل الأسعار</div>
+      <div class="hfeat"><span style="color:#ffd700">⭐</span> <span class="counter" data-target="500" data-suffix="+">0</span> زبون مسرور</div>
+      <div class="hfeat"><span style="color:#39ff14">🚚</span> توصيل سريع</div>
+      <div class="hfeat"><span style="color:#00e5ff">📞</span> دعم 24/7</div>
+      <div class="hfeat"><span style="color:#a855f7">💳</span> دفع عند الاستلام</div>
     </div>
 
     <!-- flash sale countdown -->
@@ -1648,84 +1357,19 @@ body.has-seasonal-banner .site-header{top:0;}
   </div>
 </section>
 
-<!-- ════════ BRAND STRIP ════════ -->
-<div class="brand-strip" aria-label="الماركات المتوفرة">
-  <div class="brand-strip-track">
-    <span class="brand-item"><span class="b-icon">🎮</span>SONY</span>
-    <span class="brand-item"><span class="b-icon">🎮</span>PlayStation</span>
-    <span class="brand-item"><span class="b-icon">🟩</span>XBOX</span>
-    <span class="brand-item"><span class="b-icon">🟥</span>Nintendo</span>
-    <span class="brand-item"><span class="b-icon">🖥️</span>STEAM</span>
-    <span class="brand-item"><span class="b-icon">💻</span>ASUS</span>
-    <span class="brand-item"><span class="b-icon">🔺</span>MSI</span>
-    <span class="brand-item"><span class="b-icon">⌨️</span>CORSAIR</span>
-    <span class="brand-item"><span class="b-icon">🐍</span>RAZER</span>
-    <!-- duplicate for seamless loop -->
-    <span class="brand-item"><span class="b-icon">🎮</span>SONY</span>
-    <span class="brand-item"><span class="b-icon">🎮</span>PlayStation</span>
-    <span class="brand-item"><span class="b-icon">🟩</span>XBOX</span>
-    <span class="brand-item"><span class="b-icon">🟥</span>Nintendo</span>
-    <span class="brand-item"><span class="b-icon">🖥️</span>STEAM</span>
-    <span class="brand-item"><span class="b-icon">💻</span>ASUS</span>
-    <span class="brand-item"><span class="b-icon">🔺</span>MSI</span>
-    <span class="brand-item"><span class="b-icon">⌨️</span>CORSAIR</span>
-    <span class="brand-item"><span class="b-icon">🐍</span>RAZER</span>
-  </div>
-</div>
-
-<!-- ════════ SEASONAL OFFERS SHOWCASE ════════ -->
-<section id="seasonal-offers" class="section fade-in-up">
-  <div class="container">
-    <div class="sec-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
-      <div>
-        <span class="eyebrow">🔥 عروض موسمية</span>
-        <h2>مايفوتكش أي عرض</h2>
-      </div>
-      <a href="#consoles" class="btn btn-ghost btn-3d" style="flex-shrink:0;">عرض كل العروض</a>
-    </div>
-    <div class="seasonal-grid stagger-children">
-      <a href="#consoles" class="seasonal-card s-summer reveal"><span class="seasonal-emoji-bg">☀️</span><span class="s-tag">عروض الصيف</span><h3>خصم يصل 50%</h3><span class="btn-shop">تسوق الآن</span></a>
-      <a href="#consoles" class="seasonal-card s-winter reveal"><span class="seasonal-emoji-bg">❄️</span><span class="s-tag">عروض الشتاء</span><h3>خصم يصل 40%</h3><span class="btn-shop">تسوق الآن</span></a>
-      <a href="#consoles" class="seasonal-card s-ramadan reveal"><span class="seasonal-emoji-bg">🌙</span><span class="s-tag">عروض رمضان</span><h3>خصم يصل 45%</h3><span class="btn-shop">تسوق الآن</span></a>
-      <a href="#consoles" class="seasonal-card s-eid reveal"><span class="seasonal-emoji-bg">🎉</span><span class="s-tag">عروض العيد</span><h3>خصم يصل 35%</h3><span class="btn-shop">تسوق الآن</span></a>
-      <a href="#consoles" class="seasonal-card s-blackfriday reveal"><span class="seasonal-emoji-bg">🖤</span><span class="s-tag">Black Friday</span><h3>خصم يصل 70%</h3><span class="btn-shop">تسوق الآن</span></a>
-      <a href="#consoles" class="seasonal-card s-cyber reveal"><span class="seasonal-emoji-bg">💠</span><span class="s-tag">Cyber Monday</span><h3>خصم يصل 90%</h3><span class="btn-shop">تسوق الآن</span></a>
-    </div>
-  </div>
-</section>
-
 <!-- ════════ CATEGORIES ════════ -->
 <section id="categories" class="section fade-in-up section-shine">
   <div class="container">
     <div class="sec-head reveal">
       <span class="eyebrow">فئات المتجر</span>
-      <h2>تسوق حسب الفئة</h2>
+      <h2>كل اللي تحتاجه في مكان واحد</h2>
       <p>كونسولات، إكسسوارات، جيلبريك، وعروض حصرية للمتابعين.</p>
     </div>
-    <div class="cat-icon-strip stagger-children">
-      <button class="cat-icon-item reveal" data-filter="ps"><span class="ci-emoji">🎮</span><span>PlayStation</span></button>
-      <button class="cat-icon-item reveal" data-filter="xbox"><span class="ci-emoji">🟩</span><span>Xbox</span></button>
-      <button class="cat-icon-item reveal" data-filter="nintendo"><span class="ci-emoji">🟥</span><span>Nintendo</span></button>
-      <button class="cat-icon-item reveal" data-filter="pc"><span class="ci-emoji">🖥️</span><span>PC Gaming</span></button>
-      <button class="cat-icon-item reveal" data-filter="steamdeck"><span class="ci-emoji">🕹️</span><span>Steam Deck</span></button>
-      <button class="cat-icon-item reveal" data-filter="jailbreak"><span class="ci-emoji">🔓</span><span>جيلبريك</span></button>
-      <button class="cat-icon-item reveal" data-filter="accessory"><span class="ci-emoji">🎧</span><span>إكسسوارات</span></button>
-      <a href="#seasonal-offers" class="cat-icon-item deals reveal"><span class="ci-emoji">%</span><span>عروض</span></a>
+    <div class="grid-3">
+      <article class="cat-card reveal"><span class="icon">🎮</span><h3>كونسولات جاهزة</h3><p>PS2، PS3، PS4، PS5، Xbox One S، Xbox Series S/X مع إعدادات مضمونة وجيلبريك.</p></article>
+      <article class="cat-card reveal"><span class="icon">🕹️</span><h3>إكسسوارات شاملة</h3><p>سماعات، دراعات، شواحن، وكراسي ألعاب لتجربة لعب كاملة ومريحة.</p></article>
+      <article class="cat-card reveal"><span class="icon">🔥</span><h3>عروض وخصومات</h3><p>عروض حصرية للمتابعين والعملاء الجدد مع خيارات دفع مريحة.</p></article>
     </div>
-  </div>
-</section>
-
-<!-- ════════ BEST SELLERS ════════ -->
-<section id="best-sellers" class="section fade-in-up section-shine">
-  <div class="container">
-    <div class="sec-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
-      <div>
-        <span class="eyebrow">⭐ الأكثر مبيعاً</span>
-        <h2>منتجات يثق بها عملاؤنا</h2>
-      </div>
-      <a href="#consoles" class="btn btn-ghost btn-3d" style="flex-shrink:0;">عرض الكل</a>
-    </div>
-    <div class="product-grid stagger-children" id="best-sellers-grid"></div>
   </div>
 </section>
 
@@ -2570,22 +2214,6 @@ body.has-seasonal-banner .site-header{top:0;}
   </div>
 </section>
 
-<!-- ════════ ORDER TRACKING ════════ -->
-<section id="order-tracking" class="section fade-in-up" style="background:rgba(0,229,255,.02);">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="eyebrow">تتبع طلبك</span>
-      <h2>فين وصل طلبك؟</h2>
-      <p>دخل رقم التتبع اللي توصلتي بيه بعد الطلب باش تشوف آخر تحديث.</p>
-    </div>
-    <div style="max-width:520px;margin:0 auto;display:flex;gap:.6rem;flex-wrap:wrap;">
-      <input id="order-tracking-input" type="text" placeholder="مثال: MM-XXXXXXX-XXX" style="flex:1;min-width:220px;padding:.85rem 1.1rem;border-radius:12px;border:1px solid var(--border,rgba(255,255,255,.1));background:rgba(255,255,255,.04);color:var(--text);font-family:inherit;font-size:.95rem;" />
-      <button id="order-tracking-btn" class="btn btn-cyan btn-3d">🔍 تتبع</button>
-    </div>
-    <div id="order-tracking-result" style="max-width:640px;margin:1.5rem auto 0;"></div>
-  </div>
-</section>
-
 <!-- ════════ PS4 COMPARISON TABLE ════════ -->
 <section id="comparison" class="section fade-in-up" style="background:rgba(0,212,255,.015);">
   <div class="container">
@@ -2782,7 +2410,6 @@ body.has-seasonal-banner .site-header{top:0;}
       <a href="#offers" data-i18n="nav_offers">عروض</a>
       <a href="#contact" data-i18n="nav_contact">اتصل</a>
       <a href="retour.html" data-i18n="nav_returns">📦 الإرجاع</a>
-      <a href="payment.html">💳 طرق الدفع</a>
       <a href="admin.html">⚙ إدارة</a>
       <a href="#" style="display:none;">حسابي</a>
       <a href="https://www.instagram.com/mol.lmaneta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" data-i18n="contact_instagram">
@@ -2794,11 +2421,6 @@ body.has-seasonal-banner .site-header{top:0;}
         واتساب
       </a>
       <a href="retour.html" data-i18n="nav_returns">📦 الإرجاع والضمان</a>
-    </div>
-    <div class="footer-map" style="width:100%;margin-top:1.5rem;">
-      <div id="footer-map-embed" style="border-radius:16px;overflow:hidden;border:1px solid var(--border);min-height:220px;background:var(--surface);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;">
-        جاري تحميل الخريطة…
-      </div>
     </div>
     <small style="color:var(--muted);font-size:.75rem;" data-i18n="footer_rights">© <span data-target="2026">2026</span> Mol Maneta. جميع الحقوق محفوظة.</small>
     <small style="color:rgba(255,255,255,.12);font-size:.65rem;width:100%;text-align:center;margin-top:.5rem;" data-i18n="footer_rights">Mol Maneta © 2026 — جميع الحقوق محفوظة</small>
@@ -2954,8 +2576,8 @@ document.querySelectorAll('.product-card').forEach(card=>{
 try{
   const d=JSON.parse(localStorage.getItem('mm_products_v1') || localStorage.getItem('mm_products_backup_v1') || '{}');
   Object.keys(d).forEach(id=>{
-    const cards=document.querySelectorAll(`.product-card[data-id="${id}"]`);
-    cards.forEach(c=>{
+    const c=document.querySelector(`.product-card[data-id="${id}"]`);
+    if(!c)return;
     if(d[id].video){
       const img=c.querySelector('img');
       if(img){
@@ -2983,7 +2605,6 @@ try{
     }else if(d[id].img){const i=c.querySelector('img');if(i)i.src=d[id].img;}
     if(d[id].title){const h=c.querySelector('h3');if(h)h.textContent=d[id].title;}
     if(d[id].price){const p=c.querySelector('.card-price');if(p)p.textContent=d[id].price;}
-    });
   });
 }catch(e){}
 
@@ -3127,15 +2748,6 @@ setTimeout(()=>{
   if(pl&&!pl.classList.contains('hidden'))pl.classList.add('hidden');
 },3000);
 
-// ── VISITOR COUNTER (once per browser session, feeds admin analytics) ──
-try {
-  if (!sessionStorage.getItem('mm_visit_counted_v1')) {
-    const n = parseInt(localStorage.getItem('mm_visit_count_v1') || '0', 10) || 0;
-    localStorage.setItem('mm_visit_count_v1', String(n + 1));
-    sessionStorage.setItem('mm_visit_counted_v1', '1');
-  }
-} catch(e) {}
-
 // ── SCROLL PROGRESS ─────────────────────────────────────
 const sp=document.getElementById('scroll-progress');
 window.addEventListener('scroll',()=>{
@@ -3218,23 +2830,11 @@ document.querySelectorAll('.order-wa, .order-ig').forEach(btn=>{
       if(!card)return;
       const title=card.querySelector('h3')?.textContent||'غير معروف';
       const price=card.querySelector('.card-price')?.textContent||'';
-      const orderId='MM-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,5).toUpperCase();
-      const nowIso=new Date().toISOString();
-      const order={
-        id:orderId,
-        product:title,
-        price:price,
-        date:nowIso,
-        timestamp:Date.now(),
-        status:'received',
-        history:[{status:'received',at:nowIso}]
-      };
+      const order={product:title,price:price,date:new Date().toLocaleDateString('ar-MA'),timestamp:Date.now()};
       // save locally
       const orders=JSON.parse(localStorage.getItem('mm_orders_v1')||'[]');
       orders.push(order);
       localStorage.setItem('mm_orders_v1',JSON.stringify(orders));
-      // let the shopper know their tracking code
-      if(window.mmToast) window.mmToast('رقم تتبع طلبك: '+orderId, 'success', 6000);
       // sync to server API
       if(!location.protocol.startsWith('file')){
         fetch('/api/orders',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(order)}).catch(()=>{});
@@ -3277,31 +2877,6 @@ document.querySelectorAll('.order-wa, .order-ig').forEach(btn=>{
     });
   });
   if(searchInput)searchInput.addEventListener('input',applyFilterAndSearch);
-
-  // ── wire the header search bar (logo row) into this same system ──
-  const headerInput=document.getElementById('header-search-input');
-  const headerCatSelect=document.getElementById('search-cat-select');
-  const headerBtn=document.getElementById('header-search-btn');
-  function runHeaderSearch(){
-    const term=headerInput?headerInput.value.trim():'';
-    const cat=headerCatSelect?headerCatSelect.value:'all';
-    if(searchInput){ searchInput.value=term; }
-    const targetBtn=document.querySelector('.filter-btn[data-filter="'+cat+'"]')||document.querySelector('.filter-btn[data-filter="all"]');
-    if(targetBtn) targetBtn.click(); else applyFilterAndSearch();
-    if(searchInput) applyFilterAndSearch();
-    document.getElementById('consoles')?.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-  headerBtn?.addEventListener('click',runHeaderSearch);
-  headerInput?.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); runHeaderSearch(); } });
-
-  // ── category icon strip (shop-by-category section) ──
-  document.querySelectorAll('.cat-icon-item[data-filter]').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const targetBtn=document.querySelector('.filter-btn[data-filter="'+btn.dataset.filter+'"]');
-      if(targetBtn) targetBtn.click();
-      document.getElementById('consoles')?.scrollIntoView({behavior:'smooth',block:'start'});
-    });
-  });
 })();
 
 // ── FALLBACK IMAGES ─────────────────────────────────────
@@ -3318,144 +2893,34 @@ function fallback(img){
   img.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"><rect width="400" height="300" fill="#131b2e"/><text x="200" y="140" text-anchor="middle" fill="#2a3a5e" font-size="80">'+icon+'</text><text x="200" y="190" text-anchor="middle" fill="#4a5a7e" font-size="15" font-family="Cairo,sans-serif">'+name+'</text><text x="200" y="215" text-anchor="middle" fill="#2a4a6e" font-size="12" font-family="Cairo,sans-serif">📸 أضف صورة من لوحة الإدارة</text></svg>');
 }
 
-// ── STOCK INDICATOR (reads real stock set by admin, no fake numbers) ──
+// ── STOCK INDICATOR ────────────────────────────────────
 (function(){
-  let prods = {};
-  try {
-    const raw = localStorage.getItem('mm_products_v1') || localStorage.getItem('mm_products_backup_v1');
-    prods = raw ? JSON.parse(raw) : {};
-  } catch(e) { prods = {}; }
-
+  const stockCache=localStorage.getItem('mm_stock_v1');
+  let stocks=stockCache?JSON.parse(stockCache):{};
+  if(!stockCache){
+    // seed random stock values
+    document.querySelectorAll('.product-card').forEach(c=>{
+      const id=c.dataset.id;
+      if(id) stocks[id]={total:Math.floor(Math.random()*10)+2,sold:0};
+    });
+    localStorage.setItem('mm_stock_v1',JSON.stringify(stocks));
+  }
   document.querySelectorAll('.product-card').forEach(card=>{
     const id=card.dataset.id;
-    if(!id) return;
-    const p = prods[id];
-    // Only show a badge when admin has actually set a tracked stock number.
-    // Untracked products (stock left blank in admin) show nothing — no fake scarcity.
-    if(!p || typeof p.stock !== 'number') return;
-    const remaining = p.stock;
+    if(!id||!stocks[id])return;
+    const s=stocks[id];
+    const remaining=s.total-s.sold;
     const badge=document.createElement('div');
     badge.className='stock-badge'+(remaining<=2?' stock-low':remaining<=5?' stock-mid':' stock-high');
     badge.textContent=remaining<=0?'⚠️ نفد المخزون':remaining<=2?'⚠️ آخر '+remaining+' قطع':remaining<=5?'🔥 متبقي '+remaining:'✅ متوفر';
     card.querySelector('.card-body')?.insertBefore(badge,card.querySelector('.rating'));
   });
-})();
-
-// ── BEST SELLERS SHOWCASE (clones real cards, adds discount + rating) ──
-(function(){
-  const grid=document.getElementById('best-sellers-grid');
-  if(!grid) return;
-  const picks=[
-    {id:'ps5-disc', oldPrice:'4,499 د.م', rating:4.9, count:128},
-    {id:'xbox-series-s', oldPrice:'2,899 د.م', rating:4.8, count:96},
-    {id:'ctrl-ps5', oldPrice:'599 د.م', rating:4.9, count:214},
-    {id:'nsw-oled', oldPrice:null, rating:4.7, count:76},
-    {id:'headset', oldPrice:'799 د.م', rating:4.8, count:153},
-    {id:'chair', oldPrice:'2,399 د.م', rating:4.6, count:87}
-  ];
-  picks.forEach(pick=>{
-    const source=document.querySelector('#consoles .product-card[data-id="'+pick.id+'"], #accessories .product-card[data-id="'+pick.id+'"]');
-    if(!source) return;
-    const clone=source.cloneNode(true);
-    clone.classList.add('reveal');
-    // discount badge (only if we have a reference "old" price to compare)
-    if(pick.oldPrice){
-      const priceEl=clone.querySelector('.card-price');
-      const newPriceText=priceEl?priceEl.textContent.trim():'';
-      const oldNum=parseFloat(pick.oldPrice.replace(/[^\d.]/g,''));
-      const newNum=parseFloat(newPriceText.replace(/[^\d.]/g,''));
-      if(oldNum && newNum && oldNum>newNum){
-        const pct=Math.round((1-newNum/oldNum)*100);
-        const badge=document.createElement('div');
-        badge.className='discount-badge';
-        badge.textContent='-'+pct+'%';
-        clone.appendChild(badge);
-        if(priceEl){
-          const oldSpan=document.createElement('span');
-          oldSpan.style.cssText='color:var(--muted);text-decoration:line-through;font-size:.78rem;font-weight:600;margin-right:.4rem;';
-          oldSpan.textContent=pick.oldPrice;
-          priceEl.appendChild(oldSpan);
-        }
-      }
-    }
-    // star rating
-    const ratingEl=clone.querySelector('.rating');
-    if(ratingEl){
-      const full=Math.round(pick.rating);
-      ratingEl.outerHTML='<div class="pc-rating">'+'★'.repeat(full)+'☆'.repeat(5-full)+' <b>'+pick.rating+'</b> <span class="rc">('+pick.count+')</span></div>';
-    }
-    grid.appendChild(clone);
-  });
-})();
-
-// ── WISHLIST (heart toggle on cards + header badge + panel) ────
-(function(){
-  const WL_KEY='mm_wishlist_v1';
-  function getWL(){ try{ return JSON.parse(localStorage.getItem(WL_KEY))||[]; }catch(e){ return []; } }
-  function setWL(list){ localStorage.setItem(WL_KEY, JSON.stringify(list)); updateBadge(); }
-  function updateBadge(){
-    const n=getWL().length;
-    const b=document.getElementById('wishlist-count-badge');
-    if(b) b.textContent=n;
-  }
-  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
-
-  // inject a heart button on every product card that doesn't already have one
-  document.querySelectorAll('.product-card[data-id]').forEach(card=>{
-    if(card.querySelector('.wish-heart')) return;
-    const id=card.dataset.id;
-    const heart=document.createElement('button');
-    const isSaved = getWL().includes(id);
-    heart.className='wish-heart'+(isSaved?' active':'');
-    heart.type='button';
-    heart.setAttribute('aria-label','أضف للمفضلة');
-    heart.textContent = isSaved ? '❤️' : '🤍';
-    heart.addEventListener('click', e=>{
-      e.preventDefault(); e.stopPropagation();
-      let list=getWL();
-      if(list.includes(id)){ list=list.filter(x=>x!==id); heart.textContent='🤍'; heart.classList.remove('active'); }
-      else{ list.push(id); heart.textContent='❤️'; heart.classList.add('active'); if(window.mmToast) window.mmToast('❤️ تمت الإضافة للمفضلة','success',1800); }
-      setWL(list);
-    });
-    card.style.position = card.style.position || 'relative';
-    card.appendChild(heart);
-  });
-  updateBadge();
-
-  // simple panel listing wishlist items
-  function openWishlistPanel(){
-    let panel=document.getElementById('wishlist-panel');
-    if(!panel){
-      panel=document.createElement('div');
-      panel.id='wishlist-panel';
-      panel.innerHTML='<div class="wl-panel-box"><div class="wl-panel-head"><strong>❤️ المفضلة</strong><button class="wl-panel-close" aria-label="إغلاق">×</button></div><div class="wl-panel-body"></div></div>';
-      document.body.appendChild(panel);
-      panel.addEventListener('click', e=>{ if(e.target===panel) panel.classList.remove('open'); });
-      panel.querySelector('.wl-panel-close').addEventListener('click', ()=>panel.classList.remove('open'));
-    }
-    const body=panel.querySelector('.wl-panel-body');
-    const ids=getWL();
-    if(!ids.length){
-      body.innerHTML='<p style="color:var(--muted);text-align:center;padding:2rem 1rem;">قائمة المفضلة فارغة. اضغط 🤍 فوق أي منتج باش تزيدو هنا.</p>';
-    } else {
-      body.innerHTML=ids.map(id=>{
-        const card=document.querySelector('.product-card[data-id="'+id+'"]');
-        const title=card?card.querySelector('h3')?.textContent:id;
-        const price=card?card.querySelector('.card-price')?.textContent:'';
-        return '<div class="wl-item"><span>'+esc(title)+'</span><span class="wl-item-price">'+esc(price)+'</span><button class="wl-item-remove" data-id="'+esc(id)+'">🗑️</button></div>';
-      }).join('');
-      body.querySelectorAll('.wl-item-remove').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          setWL(getWL().filter(x=>x!==btn.dataset.id));
-          const card=document.querySelector('.product-card[data-id="'+btn.dataset.id+'"] .wl-heart');
-          if(card) card.textContent='🤍';
-          openWishlistPanel(); // re-render
-        });
-      });
-    }
-    panel.classList.add('open');
-  }
-  document.getElementById('wishlist-icon')?.addEventListener('click', e=>{ e.preventDefault(); openWishlistPanel(); });
+  // export for admin override
+  window.updateStock=function(id,val){
+    if(stocks[id])stocks[id].total=val;
+    localStorage.setItem('mm_stock_v1',JSON.stringify(stocks));
+    location.reload();
+  };
 })();
 
 // ── PRODUCT IMAGE CAROUSEL ──────────────────────────────
@@ -3849,6 +3314,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     const next = order[(idx+1)%order.length];
     applyLang(next);
   });
+  const adminLink = document.querySelector('a[href="/admin"]');
+  if (adminLink && location.protocol.startsWith('file')) {
+    adminLink.href = 'admin.html';
+  }
 });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -4075,33 +3544,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     });
   });
-
-  // ── 9. GOOGLE MAPS (footer, live from admin config) ──
-  function renderFooterMap(){
-    const host=document.getElementById('footer-map-embed');
-    if(!host) return;
-    let cfg=null;
-    try{ cfg=JSON.parse(localStorage.getItem('mm_maps_config_v1')); }catch(e){}
-    let src='';
-    if(cfg && cfg.embed && cfg.embed.trim()){
-      const m=cfg.embed.match(/src=["']([^"']+)["']/);
-      src = m ? m[1] : cfg.embed.trim();
-    } else if(cfg && cfg.lat && cfg.lng){
-      src = 'https://maps.google.com/maps?q='+encodeURIComponent(cfg.lat)+','+encodeURIComponent(cfg.lng)+'&z=15&output=embed';
-    } else if(cfg && cfg.address){
-      src = 'https://maps.google.com/maps?q='+encodeURIComponent(cfg.address)+'&z=15&output=embed';
-    } else {
-      // sensible default: general Morocco coverage note, no embed until configured
-      src = 'https://maps.google.com/maps?q='+encodeURIComponent('أيت زكان، المغرب')+'&z=8&output=embed';
-    }
-    host.innerHTML = '<iframe src="'+src+'" width="100%" height="240" style="border:0;display:block;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع المتجر"></iframe>';
-  }
-  renderFooterMap();
-  window.addEventListener('storage', e => { if(e.key==='mm_maps_config_v1') renderFooterMap(); });
 })();
 </script>
-<script src="tracking.js"></script>
-<script src="seasonal.js"></script>
-<script src="galaxy-bg.js"></script>
 <script src="auth.js"></script></body>
 </html>

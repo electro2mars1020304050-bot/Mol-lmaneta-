@@ -4,6 +4,5 @@
   <url><loc>https://molmaneta.com/admin.html</loc><priority>0.3</priority></url>
   <url><loc>https://molmaneta.com/404.html</loc><priority>0.1</priority></url>
   <url><loc>https://molmaneta.com/retour.html</loc><priority>0.4</priority></url>
-  <url><loc>https://molmaneta.com/payment.html</loc><priority>0.5</priority></url>
   <url><loc>https://molmaneta.com/thankyou.html</loc><priority>0.4</priority></url>
 </urlset>
